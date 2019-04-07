@@ -1,0 +1,24 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+const ayarlar = require('./ayarlar.json');
+
+var prefix = ayarlar.prefix;
+
+
+client.on('ready', () => {
+  console.log(`Miribalar Efenim ${client.user.tag} geldi!`);
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'sa') {
+    msg.reply('Aleyküm selam cannýýmmm');
+  }
+  if (msg.content.toLowerCase() === 'tanýþalým mý') {
+    msg.reply('Olur caným tabi hemen tanýþalým :)');
+  }
+  if (msg.content.toLowerCase() === prefix + 'adam' ) {
+    msg.reply('dön bir aynaya bak derim');
+  }
+});
+
+client.login('NTY0MDIzMjEyODk2MTU3NzA3.XKh-lw.uHDni6-yD3Qma0F1hfPww0N25RM');
